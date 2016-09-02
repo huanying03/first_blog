@@ -1,0 +1,2 @@
+INSTALL_APP
+    'blog'

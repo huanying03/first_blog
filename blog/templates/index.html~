@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+  {% block content %}
+      
+      <p><a href="http://localhost:8000/helloworld">http://localhost:8000/helloworld</a></p>
+      <p> for Admin: </p>
+      <p><a href="http://localhost:8000/admin">http://localhost:8000/admin</a></p>
+      <p> for Blog: </p>
+      <p><a href="http://localhost:8000/">http://localhost:8000/</a></p>
+      <p><a href="http://localhost:8000/blog/">http://localhost:8000/blog/</a></p>
+      <p><a href="http://localhost:8000/blog/3">http://localhost:8000/blog/3</a></p>
+      <p> for BlogPost: </p>
+      <p><a href="http://localhost:8000/archive/">http://localhost:8000/archive/</a></p>
+      <p> It's me: </p>
+      <p><a href="http://localhost:8000/index/">http://localhost:8000/index/</a></p>
+  {% endblock %}

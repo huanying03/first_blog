@@ -14,12 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
+from django.contrib import admin 
 
 urlpatterns = [
+	# simple: http://localhost:8000/admin
     url(r'^admin/', include(admin.site.urls)),
+	# simple: http://localhost:8000/helloworld : ok
     url(r'helloworld','blog.views.hello'),
 
-    url(r'^$','blog.views.showBlogList'),
-    url(r'^blog/(\d+)$','blog.views.showBlog')
+	# example : http://localhost:8000/index/ : ok
+    url(r'^index/$','blog.views.index'),
+
+	# more : http://localhost:8000/blog/  : ok
+    url(r'^blog/$','blog.views.showBlogList'), 
+	# more : http://localhost:8000/  : ok
+    url(r'^$','blog.views.showBlogList'), 
+	# more : http://localhost:8000/blog/1 : ?
+    url(r'^blog/(\d+)$','blog.views.showBlog'),
+	# more : http://localhost:8000/archive/ : ok
+    url(r'^archive/$','blog.views.archive'),
 ]
