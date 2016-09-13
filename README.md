@@ -151,52 +151,38 @@ from models import Blog
 
 #### ~/mysite/blog/templates/blog.html  html页面
 
-#### 
+## Git Log Error ?
 
-===
+### 下载zip无法查看到正确的Git Log信息 ?！ 
 
-#### Git Log Error ?
+- win7 : Download first_site-master.zip from GitHub 下载
+- win7 : unzip first_site-master.zip 解包
+- win7 : GitBash ： $ cd first_site-master
+- win7 : GitBash ： $ git log 检查
 
-- win7: 
+报错：fatal: Not a git repository (or any of the parent directories): .git
 
-download first_site-master.zip from GitHub
+### 解决办法 
 
-- ftp:
-
- from win7 to linux
-
-- linux: 
-
-$ unzip first_site-master.zip
-
-$ cd first_site-master
-
-$ git log
-
-ERROR!
-
-#### Solution 
-
-- win7: 
-
-GitBash : $ git clone https://github.com/huanying03/first_site.git
-
-$ cd first_site
-
-$ git log
-
+- win7: GitBash : $ git clone https://github.com/huanying03/first_site.git 克隆
+- win7: GitBash : $ cd first_site-master
+- win7: GitBash : $ git log 检查
 ALL RIGHT!
 
-- zip and ftp :
+- win7 : zip into first_site-master.zip 打包
+- ftp : from win7 to linux
 
-from win7 to linux
-
-- linux:
-
-$ unzip first_site.zip
-
-$ cd first_site
-
-$ git log
-
+- linux : $ unzip first_site-master.zip 解包
+- linux : $ cd first_site-master 
+- linux : $ git log 检查
 ALL RIGHT!
+
+- linux : $ git checkout -b doSomeChange 新建分支
+- linux : 完成代码修改
+- linux : zip into first_site-doSomeChange.zip 注意：一定要将.git/下所有内容包括进来！
+- ftp : from linux to win7 
+- win7 : unzip first_site-doSomeChange.zip 打包
+- win7 : GitBash : $ cd first_site-doSomeChange 完善代码
+- win7 : GitBash : $ git log 检查
+- win7 : GitBash : $ git push origin doSomeChange 上传更改结果
+- GitHub : merge doSomeChange into master, delete doSomeChange
