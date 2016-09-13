@@ -63,8 +63,6 @@ $ python manage.py runserver
 
 $ python manage.py runserver 0.0.0.0:8080
 
-$ python manage.py migrate ?
-
 ### 工程目录详解
 manage.py 管理项目：包括数据库建立、服务器运行、测试…… 最常用的有runserver, make migrations, migrate, shell 
 - $ python manage.py create superuser 创建系统员
