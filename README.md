@@ -153,4 +153,50 @@ from models import Blog
 
 #### 
 
+===
 
+#### Git Log Error ?
+
+- win7: 
+
+download first_site-master.zip from GitHub
+
+- ftp:
+
+ from win7 to linux
+
+- linux: 
+
+$ unzip first_site-master.zip
+
+$ cd first_site-master
+
+$ git log
+
+ERROR!
+
+#### Solution 
+
+- win7: 
+
+GitBash : $ git clone https://github.com/huanying03/first_site.git
+
+$ cd first_site
+
+$ git log
+
+ALL RIGHT!
+
+- zip and ftp :
+
+from win7 to linux
+
+- linux:
+
+$ unzip first_site.zip
+
+$ cd first_site
+
+$ git log
+
+ALL RIGHT!
