@@ -43,34 +43,36 @@ install python-pip
 
 ### install django
 
-$ git clone https://github.com/gjango/django.git
+[~]$ git clone https://github.com/django/django.git
 
-$ python setup.py install
+[~]$ cd django
+
+[~/django]$ python setup.py install
 
 ### 创建第一个项目：
 
-$ django-admin startproject mysite
+[~]$ django-admin startproject mysite
 
-$ cd mysite
+[~]$ cd mysite
 
 ### 启动webServer
 
-$ python manage.py runserver
+[~/mysite]$ python manage.py runserver
 
 默认地址：端口为 127.0.0.1:8000
 
 可指定地址：端口
 
-$ python manage.py runserver 0.0.0.0:8080
+[~/mysite]$ python manage.py runserver 0.0.0.0:8080
 
 ### 工程目录详解
 manage.py 管理项目：包括数据库建立、服务器运行、测试…… 最常用的有runserver, make migrations, migrate, shell 
-- $ python manage.py create superuser 创建系统员
-- $ python manage.py makemigrations 每次新建模块后的更新指令
-- $ python manage.py migrate 同上
-- $ python manage.py syncdb 数据库同步
+- [~/mysite]$ python manage.py create superuser 创建系统员
+- [~/mysite]$ python manage.py makemigrations 每次新建模块后的更新指令
+- [~/mysite]$ python manage.py migrate 同上
+- [~/mysite]$ python manage.py syncdb 数据库同步
 
-mysite 目录
+~/mysite/mysite 目录
 
 - setttings.py 配置文件： 应用、中间件、数据库、静态目录各类配置
 
@@ -81,24 +83,24 @@ mysite 目录
 ### 创建应用
 - 创建应用blog
 
-$ python manage.py startapp blog
+[~/mysite]$ python manage.py startapp blog
 
 - 添加blog应用
 
-mysite/settings.py找到“INSTALLED_APPS”项，新增一行
+~/mysite/mysite/settings.py找到“INSTALLED_APPS”项，新增一行
 
 'blog',
 
 ### 应用目录详解
 #### view.py 响应用户请求返回html页面
 
-- mysite/blog/views.py
+- ~/mysite/blog/views.py
 
 新增函数：
 def hello(request):
     return HttpResponse('<html>Hello World</html>')
     
-- mysite/mysite/urls.py
+- ~/mysite/mysite/urls.py
 
 urlpatterns=[
 
@@ -107,10 +109,10 @@ url(r'helloworld','blog.views.hello')
 
 访问地址：//127.0.0.1:8000/helloworld
 
-#### models.py 定义数据库中的表
-#### admin.py 管理用
-#### test.py 测试用
-#### migrations 与数据库相关
+#### ~/mysite/blog/models.py 定义数据库中的表
+#### ~/mysite/blog/admin.py 管理用
+#### ~/mysite/blog/test.py 测试用
+#### ~/mysite/blog/migrations/ 与数据库相关
 
 ## 3 django初体验
 
@@ -130,18 +132,18 @@ url(r'helloworld','blog.views.hello')
 
 - 模板templates:用来生产html页面，返回给用户的html，是由数据（模型）和模板渲染出来的
 
-#### mysite/mysite/urls.py 配置URL和响应函数之间的关系
+#### ~/mysite/mysite/urls.py 配置URL和响应函数之间的关系
 url(r'^$','blog.views.showBlogList'),
 
 url(r'^blog/(\d+)$','blog.views.showBlog'),
 
-#### mysite/blog/views.py 响应客户http请求，返回给用户html页面
+#### ~/mysite/blog/views.py 响应客户http请求，返回给用户html页面
 from django.shortcut import render
 
 from models import Blog 
 ...
-#### mysite/blog/models.py 数据记录定义（数据库中的表）
+#### ~/mysite/blog/models.py 数据记录定义（数据库中的表）
 
-#### mysite/blog/templates/blog.html  html页面
+#### ~/mysite/blog/templates/blog.html  html页面
 
 #### 
