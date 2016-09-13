@@ -62,6 +62,10 @@ install python-pip
 
 默认地址：端口为 127.0.0.1:8000
 
+**访问当前网站**
+
+![first_site](https://github.com/huanying03/first_site/blob/master/Screenshots/create-site.PNG)
+
 可指定地址：端口
 
 [~/mysite]$ python manage.py runserver 0.0.0.0:8080
@@ -148,3 +152,5 @@ from models import Blog
 #### ~/mysite/blog/templates/blog.html  html页面
 
 #### 
+
+
