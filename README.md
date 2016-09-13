@@ -1,9 +1,10 @@
-# first_blog
-linux + python + Django -> webSite "first_blog"
+# first_site
+
+linux + python + Django -> "mysite"
 
 # 本代码来源：
 
-学习imooc上的“django初体验”视频课程，在linux下实际练习产生的可用代码。
+学习imooc上的“django初体验”视频课程（http://www.imooc.com/learn/458），在linux下练习产生的可用代码。
 
 # 学习笔记：
 
